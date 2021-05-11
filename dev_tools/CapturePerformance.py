@@ -34,9 +34,9 @@ driver.get("https://www.rkengler.com")
 
 logs = driver.get_log("performance")
 
-events = process_browser_logs_for_network_events(logs)
+# events = process_browser_logs_for_network_events(logs)
 with open("log_entries.txt", "wt") as out:
-    for event in events:
+    for event in logs:
         pprint.pprint(event, stream=out)
 
 

@@ -5,10 +5,10 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
 def output_on_start(**kwargs):
-    print "STARTED ", kwargs
+    print("STARTED ", kwargs)
 
 def output_on_end(**kwargs):
-    print "FINISHED ", kwargs
+    print("FINISHED ", kwargs)
 
 options = webdriver.ChromeOptions()
 options.add_argument("--remote-debugging-port=8000")
@@ -20,7 +20,7 @@ tab.start()
 
 start = time.time()
 driver.get("https://fox.com")
-print int(time.time() - start)
+print(int(time.time() - start))
 
 tab.call_method("Network.emulateNetworkConditions",
                 offline=False,
@@ -35,4 +35,4 @@ tab.set_listener("Network.responseReceived", output_on_end)
 
 start = time.time()
 driver.get("https://fox.com")
-print int(time.time() - start)
+print(int(time.time() - start))

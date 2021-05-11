@@ -24,7 +24,7 @@ tab.set_listener("Network.requestWillBeSent", output_on_start)
 tab.set_listener("Network.responseReceived", output_on_end)
 
 
-driver.get("https://test.salesforce.com")
+driver.get("https://www.google.com")
 
 
 tab.stop()
